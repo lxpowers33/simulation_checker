@@ -18,5 +18,10 @@ Slurm job names for simulation needs to be in following format
 3. Then run sbatch run-checker.sbatch to start the recurring job:
 
         sbatch run-checker.sbatch
+        
+4. Jobs should start running in 8 hours. If you wish to start jobs immediatley: 
 
+        sbatch run-checker-now.sbatch
+        
+5. As jobs run, the running time should be written to the log file called log_file.txt. 
 
