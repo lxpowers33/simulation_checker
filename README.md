@@ -13,7 +13,7 @@ Slurm job names for simulation needs to be in following format
 
         {'c':['MK6_WT'], 'max':1000, 'v':[1], 'r':[1,2,3,4,5,6], 'p':'GPR40', 'd': '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi'},
 
-      Above 'MK6_W' is the condition name, '1' is the condition version, '1,2,3,4,5,6' are the rep directories, 'GPR40' is the project name used in your job names, '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi' is the directory containing the condition directory.
+      Above 'MK6_W' is the condition name, '1' is the condition version, '1000' is the max number of time to run the simulations in nanoseconds, '1,2,3,4,5,6' are the rep directories, 'GPR40' is the project name used in your job names, '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi' is the directory containing the condition directory.
 
 3. Then run sbatch run-checker.sbatch to start the recurring job:
 
