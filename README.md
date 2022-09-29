@@ -11,7 +11,7 @@ Slurm job names for simulation needs to be in following format
     
 2. Add your simulation information to run_config.py file using the appropriate format. The run_config.py file contains a list of dictionaries. Just add a new dictionary on a new line:
 
-        {'c':['MK6_WT'], 'max':1000, 'v':[1], 'r':[1,2,3,4,5,6], 'p':'GPR40', 'd': '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi'}
+        {'c':['MK6_WT'], 'max':1000, 'v':[1], 'r':[1,2,3,4,5,6], 'p':'GPR40', 'd': '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi'},
 
       Above 'MK6_W' is the condition name, '1' is the condition version, '1,2,3,4,5,6' are the rep directories, 'GPR40' is the project name used in your job names, '/oak/stanford/groups/rondror/projects/MD_simulations/amber/GPR40/jpaggi' is the directory containing the condition directory.
 
