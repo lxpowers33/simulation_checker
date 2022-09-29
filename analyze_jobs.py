@@ -34,6 +34,10 @@ def process(item, maxt, log_file):
 		if float(item['time']) > maxt:
 			 log(log_file, core + ' ' + ' over time limit' + '\n')
 			 return
+	#if True:
+	#log(log_file, core + ' ' + ' submitting' + '\n')
+	#submit_job(item)
+	#return
 	#submit_job(item)
 	if item['status'] == 'not running or pending':
 		log(log_file, core + ' ' + 'submit' + '\n')
@@ -185,21 +189,6 @@ def run_get_status():
 	log_file = "log_file.txt"
 	log(log_file, ' Dry run: {}'.format(dry_run))
 	log(log_file, datetime.now().strftime("%d/%m/%Y %H:%M:%S \n"))
-	GPR40_active = '/oak/stanford/groups/rondror/users/lxpowers/simulations/GPR40/active'
-	GPR40_ternary = '/oak/stanford/groups/rondror/users/lxpowers/simulations/GPR40/ternary'
-	xan_dir_1 = '/oak/stanford/groups/rondror/users/lxpowers/simulations/Karuna'
-	my_kix_dir = '/oak/stanford/groups/rondror/users/lxpowers/simulations/KIX'
-	conditions = [{'c':['active_AP8_MK6'], 'v':[3], 'r':[1,2,3,4,5], 'p':'GPR40', 'd':GPR40_active},
-		{'c':['active_apo'], 'v':[3], 'r':[1,2,3,4,5], 'p':'GPR40', 'd':GPR40_active},
-		{'c':['active_AP8'], 'v':[1], 'r':[1,2,3,4,5], 'p':'GPR40', 'd':GPR40_active},
-		{'c':['active_MK6'], 'v':[1], 'r':[1,2,3,4,5], 'p':'GPR40', 'd':GPR40_active},
-		{'c':['LIN_MK6'], 'v':[1], 'r':[1,2,3], 'p':'GPR40', 'd':GPR40_ternary},
-	{'c':['M1_xan_solution'], 'v':[2], 'r':[4], 'p':'Xan', 'd':xan_dir_1},
-		{'c':['KIX_KID'], 'v':[1], 'r':[1,2,3], 'p':'KIX', 'd':my_kix_dir},
-		{'c':['KIX_KID_trunc1'], 'v':[1], 'r':[1,2,3], 'p':'KIX', 'd':my_kix_dir},
-		{'c':['KIX_KID_trunc2'], 'v':[1], 'r':[1,2,3], 'p':'KIX', 'd':my_kix_dir},
-		{'c':['kix_kidmim1'], 'v':[1], 'r':[1,2,3], 'p':'KIX', 'd':my_kix_dir}
-	]
 	conditions = run_config #[conditions[9]]
 	print(conditions)
 	for i in conditions:
