@@ -69,10 +69,11 @@ def cancel_job(item):
 
 
 def submit_job(item):
+	checker_folder = os.getcwd()
 	if not dry_run:
 		os.chdir(item['rep_folder'])
 		os.system('sbatch sim_mdstep.sbatch')
-		os.chdir('/home/users/lxpowers/analyze_running')
+		os.chdir(checker_folder)
 
 
 def read_time(rep_folder):
