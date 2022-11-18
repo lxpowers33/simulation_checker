@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=sim_checker
-#SBATCH --begin=now+8hours
+#SBATCH --begin=now+1hours
 #SBATCH --partition=rondror
 #SBATCH --dependency=singleton
 #SBATCH --time=00:20:00
